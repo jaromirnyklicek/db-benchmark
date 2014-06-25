@@ -3,6 +3,6 @@
 	"minimum-stability": "dev",
 	"require": {
 		"php": "~5.4",
-		"nextras/orm": "@dev",
+		"nextras/orm": "@dev"
 	}
 }

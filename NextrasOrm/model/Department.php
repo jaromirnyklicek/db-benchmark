@@ -3,12 +3,12 @@
 namespace model;
 
 use Nextras\Orm\Entity\Entity;
-use Nextras\Orm\Relationships\OneHasMany;
+use Nextras\Orm\Relationships\ManyHasMany;
 
 
 /**
  * @property string $name
- * @property OneHasMany|Employee[] $employees {m:n EmployeesRepository $department}
+ * @property ManyHasMany|Employee[] $employees {m:n EmployeesRepository $departments}
  */
 class Department extends Entity
 {

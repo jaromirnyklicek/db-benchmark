@@ -8,7 +8,7 @@ use Nextras\Orm\Entity\Entity;
 
 /**
  * @property Salary[] $salaries {1:m SalariesRepository $employee}
- * @property Department[] $departments {m:n DepartmentsRepository primary $employee}
+ * @property Department[] $departments {m:n DepartmentsRepository primary $employees}
  * @property DateTime $birthDate
  * @property string $firstName
  * @property string $lastName

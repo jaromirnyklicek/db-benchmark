@@ -20,7 +20,7 @@ class EmployeesMapper extends Mapper
 	public function getManyHasManyParameters(IMapper $mapper)
 	{
 		if ($mapper instanceof DepartmentsMapper) {
-			return ['dept_emp', ['dept_no', 'emp_no']];
+			return ['dept_emp', ['emp_no', 'dept_no']];
 		}
 
 		return parent::getManyHasManyParameters($mapper);
