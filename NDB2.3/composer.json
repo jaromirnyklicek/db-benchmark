@@ -1,0 +1,8 @@
+{
+	"description": "Benchmark for Nette Database",
+	"minimum-stability": "dev",
+	"require": {
+		"php": ">= 5.3.1",
+		"nette/database": "~2.3.0"
+	}
+}
