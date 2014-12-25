@@ -1,8 +1,8 @@
 {
 	"description": "Benchmark for Nextras Orm",
-	"minimum-stability": "dev",
 	"require": {
 		"php": "~5.4",
+		"nette/database": "~2.3@dev",
 		"nextras/orm": "@dev"
 	}
 }
