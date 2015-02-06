@@ -14,7 +14,7 @@ date_default_timezone_set('Europe/Prague');
 $connection = new Nette\Database\Connection(
 	'mysql:dbname=employees',
 	'root',
-	''
+	'asdex'
 );
 
 $cacheStorage = new Nette\Caching\Storages\FileStorage(__DIR__ . '/temp');

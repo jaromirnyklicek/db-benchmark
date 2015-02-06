@@ -1,0 +1,32 @@
+{snippet grid} 
+{? $mask = $control->getUniqueId().'_grid';}   
+{* schova prekryvanou masku pres komponentu *}
+{if $useAjax}
+<script type="text/javascript">
+AjaxMask.Hide({$mask});
+</script>
+{/if}
+
+<div id="{$mask}" style="float:left">
+{!$tableContainer->startTag()}        
+{foreach $items as $key => $item}    
+    {if ($iterator->counter-1) % $control->columns == 0}<tr>{/if}    
+        {!$tdContainer->startTag()}
+            {* obsah polozky *}
+            {include "$itemtemplate", 'item' => $item, 'row' => $rows[$key]}
+        {!$tdContainer->endTag()}
+    {if ($iterator->counter-1) % $control->columns == $control->columns-1}</tr>{/if}
+{/foreach}
+
+{if count($items) % $control->columns > 0 && count($items) > $control->columns}
+    {for $i = 0; $i < $control->columns - count($items) % $control->columns; $i++}
+        {!$tdContainer->startTag()}
+        &nbsp;
+        {!$tdContainer->endTag()}
+    {/for}
+{/if}
+
+{!$tableContainer->endTag()} 
+</div>
+<div class="cleaner"></div>
+{/snippet}

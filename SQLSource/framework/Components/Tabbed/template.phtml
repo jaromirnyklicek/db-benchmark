@@ -1,0 +1,13 @@
+<div id="tabs-{$control->getName()}">
+    {$control->renderHeader()}
+    {$control->renderTabs()}
+</div>
+<script type="text/javascript">
+    $(document).ready(function() { 
+        var tabs = $('#tabs-' + {$control->getName()}).tabs({!$control->getInitOption()});
+        {if $control->selectedTab}
+            tabs.tabs('select', {$control->getName()} + '-' + {$control->selectedTab});
+        {/if}
+    }
+    );
+</script>

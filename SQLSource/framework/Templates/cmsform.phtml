@@ -1,0 +1,14 @@
+{?$form->render('begin')}
+<div class="general_form">
+    <div class="title">
+        <h2>{!$form->title}</h2>
+    </div>
+    <div class="">
+        {?$form->render('buttons')}        
+    </div>
+    <div class="cleaner"></div>
+    {?$form->render('body')}    
+    {?$form->render('js')}
+    {? foreach($form->getMultiForms() as $f) echo $f->render(); }
+</div>
+{?$form->render('end')}

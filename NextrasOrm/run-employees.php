@@ -1,7 +1,6 @@
 <?php
 
-use Nextras\Orm\Model\StaticModel;
-
+use \model;
 
 require __DIR__ . '/../print_benchmark_result.php';
 if (@!include __DIR__ . '/vendor/autoload.php') {
@@ -27,22 +26,22 @@ $limit = 500;
 
 $cacheStorage = new Nette\Caching\Storages\FileStorage(__DIR__ . '/temp');
 
-$connection  = new Nette\Database\Connection('mysql:dbname=employees', 'root', '');
+$connection  = new Nette\Database\Connection('mysql:dbname=employees', 'root', 'asdex');
 $structure   = new Nette\Database\Structure($connection, $useCache ? $cacheStorage : NULL);
 $conventions = new Nette\Database\Conventions\DiscoveredConventions($structure);
 $context     = new Nette\Database\Context($connection, $structure, $conventions, $useCache ? $cacheStorage : NULL);
 
+$repositories = [
+	'employees'   => new model\EmployeesRepository(new model\EmployeesMapper($context)),
+	'salaries'   => new model\SalariesRepository(new model\SalariesMapper($context)),
+	'departments' => new model\DepartmentsRepository(new model\DepartmentsMapper($context)),
+];
 
 $time = -microtime(TRUE);
 ob_start();
 
-
-$model = new StaticModel([
-	'employees'   => new model\EmployeesRepository(new model\EmployeesMapper($context)),
-	'salarieys'   => new model\SalariesRepository(new model\SalariesMapper($context)),
-	'departments' => new model\DepartmentsRepository(new model\DepartmentsMapper($context)),
-], $cacheStorage);
-
+$mf = new \Nextras\Orm\Model\SimpleModelFactory($cacheStorage, $repositories);
+$model = $mf->create();
 
 $employees = $model->employees->findOverview($limit);
 

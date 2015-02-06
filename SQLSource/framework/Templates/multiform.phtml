@@ -1,0 +1,9 @@
+<div id="multi_{$name}" class="multiforms">
+{!$subforms}
+</div>
+{if !$control->getDisabledAddButton()}
+<div style="clear:both">
+    <input type="button" id="multi_append_{$name}" value="{!$addLabel}" class="add_button" onclick="{!$name}AppendBlank()"/>
+</div>
+{/if}
+{!$js}

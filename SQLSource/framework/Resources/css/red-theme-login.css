@@ -1,0 +1,38 @@
+a:link, a:visited, a:active {
+	color: #cb2900;
+	
+}
+
+#header {
+	background: #a03326 url(../../img/core/admin/red/login_header_bg.gif) repeat-x;
+}
+
+.title_wrapper h2 {
+	color:#8e2409;
+}
+
+.button {
+	background:url(../../img/core/admin/red/submit_middle.gif) repeat-x;
+}
+
+.small_inputs .button {
+	background-image: url(../../img/core/admin/red/submit_middle_small.gif)
+	
+}
+
+.button span {
+	background:url(../../img/core/admin/red/submit_left.gif) no-repeat;
+}
+
+.small_inputs .button span {
+	background-image: url(../../img/core/admin/red/submit_left_small.gif);
+}
+
+.button span span {
+	background:url(../../img/core/admin/red/submit_right.gif) no-repeat right 0;
+}
+
+.small_inputs .button span span {
+	background-image: url(../../img/core/admin/red/submit_right_small.gif);
+}
+

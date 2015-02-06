@@ -1,0 +1,206 @@
+.buttons {text-align:center}
+
+.cmsform .title  {float:left}
+.cmsform .title h2 {color: #cb2900}
+
+.cmsform table tbody th {font-size: 11px; text-align: left; padding: 4px}
+.cmsform .input, .cmsfilter .input {
+    font-size: 12px; 
+    border: 1px solid #ccc; 
+    background: url(../../img/core/admin/input_text2.gif) repeat-x scroll 0 0; 
+    padding: 1px; 
+}
+
+.cmsform fieldset {background-color: #f7f7f7}
+.cmsform fieldset fieldset {background-color: #fcfcfc}
+.cmsfilter fieldset {background-color: #F4F4F4}
+
+.cmsfilter fieldset, .cmsform fieldset, fieldset {border: 1px solid #ccc;}
+.cmsform textarea {background-color: #ffffff !important;} 
+table.filter th {font-size: 11px; text-align: right}
+
+fieldset {
+    padding: 1px 8px;
+    margin-left: 1px;
+    margin-bottom: 5px;
+}
+
+
+legend {color: #933; font-weight:bold}
+
+.cmsfilter .button {
+  font-size: 12px; 
+  border: 1px solid #ccc; 
+  background: url(../../img/core/ico/filter.gif) no-repeat 2px 3px;
+  padding-left: 20px; 
+  text-align: left;
+  background-color: #fafafa; 
+  padding-bottom: 2px
+}
+
+.cmsfilter .reset {
+  background: url(../../img/core/ico/clear.gif) no-repeat 2px 3px;
+   background-color: #fafafa; 
+}
+
+.cmsform .button
+{
+    font-size: 12px; 
+    /*font-weight: bold;*/
+    text-decoration: none;   
+    padding: 3px;        
+    background:  url(../../img/core/ico/save.png) no-repeat;
+    padding-left: 25px;
+    display: block;    
+    border: 0px;
+    color: #966;
+    float:right;
+    text-align:left;
+    margin-left: 3px;
+    _margin-left: 0px;
+    _padding-left: 13px;
+    cursor: pointer;
+} 
+
+.cmsform .button:hover 
+{
+    color: #000;
+}
+
+span.required 
+{
+    color:#f00;
+    margin-left: 2px;
+}
+.cmsform .button-save
+{
+    width: 80px;
+}
+
+.cmsform .button-delete
+{
+    background:  url(../../img/core/ico/trash.png) no-repeat;
+    width: 90px;
+} 
+
+.cmsform .button-copy
+{
+    background:  url(../../img/core/ico/copy.png) no-repeat;
+    width: 90px;
+} 
+
+.cmsform .button-upload
+{
+    background:  url(../../img/core/ico/upload.gif) no-repeat;
+    height: 30px;
+    
+} 
+.cmsform .button-upload-one
+{
+    
+    height: 30px;    
+} 
+
+.cmsform .button-savelist
+{
+    background:  url(../../img/core/ico/savelist.png) no-repeat;
+    width: 170px;
+} 
+
+.cmsform .button:hover 
+{
+    color: #000;
+}
+
+a.button:link, a.button:visited,  a.button:active {
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+}
+
+a.button:hover *, .button:hover * {
+    text-decoration: underline;
+}    
+.general_form {
+    border: solid #dbdbdb;
+    border-width: 0 1px 1px;
+    padding: 15px 10px 10px;
+    background:#fefefe url(../../img/core/admin/forms_bg.gif) repeat-x;
+}
+
+.add_button {
+    padding: 1px;
+    border: 1px solid #ccc;
+    padding-left: 16px;
+    background: url(../../img/core/ico/add.png) no-repeat 2px 1px;
+    background-color: #ffffff;
+    font-size:  12px;
+}
+
+.invalidInput {
+    background:#FFEFEF !important;
+    border:1px dotted #FF0000 !important;
+}
+.live {color:red}
+
+.multiforms {margin-bottom: 2px; }
+.multiform {border: 1px solid #aaa; margin-bottom: 3px;}
+.multiform .formbuttons {text-align:right; background-color: #ddd}
+
+.subform .formbuttons {text-align:right; background-color: #ddd}
+.subform {border: 1px solid #aaa; margin-bottom: 3px; background-color: #f8f8f8;}
+
+.sortable:hover {
+    cursor:move;
+}
+
+.sbutton {
+    border: 1px solid #aaa; 
+    padding: 2px 5px; 
+    padding-left: 18px;
+    background: url(/img/core/ico/add.png) no-repeat 2px 1px;
+    background-color: #fff;
+}
+
+.selectbutton {
+    border: 1px solid #aaa; 
+    padding: 2px 5px;     
+    background-color: #fff;
+    float: left;
+    margin-right: 3px;
+}
+
+.subformimage {
+    float:left;
+    margin:3px;
+    width:130px;
+}
+
+.removed .subform {background-color: #ccc; color: #888}
+.removed .subform input, .removed .subform textarea {background: #ddd !important; color: #888}
+.removed .subform th {color: #888}
+
+.watermark_position {
+    border: 1px solid #ccc;
+    width: 80px;
+    background-color: #fcfcfc;
+}
+
+.scale-bar-border {
+    background-color:#FFFFFF;
+    border:1px solid #999999;
+    font-size:1px;
+    height: 2px;
+    margin-top:1px;
+    width:100%;
+}
+
+.scale-bar {
+    background-color:#eb0000 !important;
+    height:2px !important
+}
+
+.scale-text {
+    font-size: 11px;
+    padding-left: 5px;
+}

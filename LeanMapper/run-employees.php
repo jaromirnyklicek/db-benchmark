@@ -24,7 +24,7 @@ $limit = 500;
 
 $connection = new Connection(array(
 	'username' => 'root',
-	'password' => '',
+	'password' => 'asdex',
 	'database' => 'employees',
 ));
 

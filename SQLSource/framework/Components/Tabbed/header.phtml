@@ -1,0 +1,5 @@
+<ul>
+    {foreach $tabs as $tabbed}
+        <li><a href="#{$control->getName()}-{$tabbed->getName()}">{$tabbed->title}</a></li>
+    {/foreach}
+</ul>

@@ -1,11 +1,11 @@
 #!/usr/bin/env sh
 SRC_DIR="`pwd`"
 
-php "$SRC_DIR/NDB2.0/run-employees.php"
-php "$SRC_DIR/NDB2.1/run-employees.php"
 php "$SRC_DIR/NDB2.2/run-employees.php"
 php "$SRC_DIR/NDB2.3/run-employees.php"
-php "$SRC_DIR/NextrasOrm/run-employees.php"
 php "$SRC_DIR/NotORM/run-employees.php"
+php "$SRC_DIR/SQLSource/run-employees.php"
+php "$SRC_DIR/NextrasOrm/run-employees.php"
 php "$SRC_DIR/LeanMapper/run-employees.php"
+php "$SRC_DIR/VaLeanMapper/run-employees.php"
 php "$SRC_DIR/Doctrine2/run-employees.php"

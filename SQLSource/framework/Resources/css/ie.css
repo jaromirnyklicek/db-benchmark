@@ -1,0 +1,36 @@
+#wrapper {
+	height: 100%;
+}
+
+#footer {
+	height: 75px;
+}
+
+#logo a {
+	visibility: hidden;
+	behavior: url(css/iepngfix.htc);
+	cursor: pointer;
+}
+
+.system_messages li {
+	
+}
+
+.ico, .button_ico  {
+	behavior: url(css/iepngfix.htc);
+}
+
+.button em {
+	height: 1px;
+}
+
+
+body {
+	behavior: url(css/csshover.htc);
+}
+
+
+.cmsfilter .button {
+  background-position: 2px 0px;
+  padding-bottom: 0px;
+}

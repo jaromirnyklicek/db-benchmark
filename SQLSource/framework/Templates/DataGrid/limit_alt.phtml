@@ -1,0 +1,6 @@
+{? $mask = $control->getUniqueId().'_grid';} 
+<div class="limit">
+        <a href="{link limit 25}" class="{if $limit == 25}active{/if} perPage10" {if $useAjax}onclick="AjaxMask.Show('{!$mask}');return !nette.action(this.href, this)"{/if}>25</a>
+        <a href="{link limit 50}" class="{if $limit == 50}active{/if} perPage25" {if $useAjax}onclick="AjaxMask.Show('{!$mask}');return !nette.action(this.href, this)"{/if}>50</a>
+        <a href="{link limit 100}" class="{if $limit == 100}active{/if} perPage50" {if $useAjax}onclick="AjaxMask.Show('{!$mask}');return !nette.action(this.href, this)"{/if}>100</a>
+</div>

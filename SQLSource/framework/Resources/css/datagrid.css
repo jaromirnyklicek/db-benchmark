@@ -1,0 +1,152 @@
+.grid {border: 1px solid #DBDBDB}
+.datagrid .over td {background: #FFE0E0 !important}
+
+table
+{
+border-collapse:collapse; 
+empty-cells: show;
+}
+
+.datagrid {
+    margin: 0 auto;
+    font-size: 11px;  
+    float:left;
+}      
+.datagrid_body {
+    float:left;
+}
+
+.table_wrapper_inner {
+    border: solid #dbdbdb;
+    border-width:  0 0 0 1px;
+}
+
+.datagrid td, .datagrid th {
+    border: solid #dbdbdb;
+    border-width: 0 1px 1px 0;
+}
+
+.datagrid th {
+    font-weight: bold;
+    font-size: 11px;
+    color: #A53028;   
+}
+
+.datagrid th a:link, .datagrid th a:visited, .datagrid th a:hover, .datagrid th a:active {
+    color: #A53028;
+    display: block;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding: 0 16px 0 0;
+}
+
+.asc {
+    background-image:url(../../img/core/admin/asc.gif);
+}
+
+.desc {
+    background-image:url(../../img/core/admin/desc.gif);
+}
+
+.datagrid td , .datagrid th {
+    text-align: left;
+    padding: 0 6px;
+}
+
+.datagrid th {
+    background: #fff;
+}
+
+.datagrid td {
+    background: #fefefe url(../../img/core/admin/td_bg1.gif) repeat-x;
+}
+
+.datagrid tr.second td {
+    background: #f2f2f2 url(../../img/core/admin/td_bg2.gif) repeat-x;
+}
+
+
+.paginator {
+    margin: 4px 0px;
+    font-size: 11px;
+    margin-left:5px;
+}
+
+.paginator a, .paginator span {
+    margin-right: 0.1em;
+    padding: 1px 4px;
+}
+
+.paginator a {
+    border: 1px solid #AF2C11;
+    text-decoration: none;
+}
+
+.paginator span.buttonp {
+    border: 1px solid #999;
+}
+
+.paginator .current {
+    background: #8F2C11;
+    border: 1px solid #AF2C11;
+    color: white;
+    font-weight: bold;
+}
+
+
+.limit {
+    float:right;
+    margin-top: 3px;
+}
+.limit a {
+    float:left;
+    padding:4px 16px 0 0;
+    font-size:12px;
+    margin-left:5px;
+    text-decoration:none;
+    overflow:visible;
+    background-image: url('/img/listings.png');
+    background-repeat: no-repeat;
+}
+
+.limit .perPage10 { background-position: 20px bottom; }
+.limit .perPage10.active { background-position: -130px bottom !important; }
+
+.limit .perPage25 { background-position: -30px bottom; }
+.limit .perPage25.active { background-position: -180px bottom !important; }
+
+.limit .perPage50 { background-position: -80px bottom; }
+.limit .perPage50.active { background-position: -230px bottom !important; }
+
+
+.row-red td, .datagrid tr.second.row-red td {background: none; background-color: #ffaaaa !important;}
+.row-green td, .datagrid tr.second.row-green td {background: none; background-color: #d0ffd0 !important;}
+.row-blue td, .datagrid tr.second.row-blue td {background: none; background-color: #d0d0ff !important;}
+.sumrow td {background: none; background-color: #ccc !important}
+
+.actionrow td {
+   padding: 1px;
+}
+
+.actionrow .actionbutton {
+    font-size: 11px;
+    border: 1px solid #777;
+}
+
+.column_checkbox_on, .column_checkbox_off {
+    background: url(/img/core/column.checkbox.gif);
+    border: 0px;
+}
+
+.column_checkbox_off {
+    background-position: 0px 13px;
+}
+
+.limitInput {
+    border:1px solid #aaa; 
+    width: 25px; 
+    margin-right:3px;
+    font-size: 10px
+}
+

@@ -1,0 +1,9 @@
+{foreach $items as $item}
+    <div style="border: 1px solid #000">
+        <table>
+            <?php foreach ($item as $key => $value) {
+	            echo '<tr><td width="1"><b>'.$key.':</b></td><td>'.$value.'</td></tr>';
+            } ?>
+        </table>
+    </div>
+{/foreach}

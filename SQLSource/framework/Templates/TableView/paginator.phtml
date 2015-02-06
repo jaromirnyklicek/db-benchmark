@@ -1,0 +1,26 @@
+{? $mask = $control->getUniqueId().'_grid'; }
+{if $paginator->pageCount > 1}
+<div class="paginator">   
+	{if $paginator->isFirst()}
+	<span class="buttonp">«</span>    
+	{else}
+	<a href="{link page, $paginator->page - 1}" {if $useAjax}onclick="AjaxMask.Show('{!$mask}');return !nette.action(this.href, this)"{/if}>«</a>  
+	{/if}
+
+	{foreach $paginator->steps as $step}
+	{if isset($prevStep) && $step - $prevStep > 1}<span>…</span>{/if}
+	{if $step == $paginator->page}
+		<span class="current">{$step}</span>   
+	{else}
+		<a href="{link page, $step}" {if $useAjax}onclick="AjaxMask.Show('{!$mask}');return !nette.action(this.href, this)"{/if}>{$step}</a>  
+	{/if}
+	{? $prevStep = $step }
+	{/foreach}
+
+	{if $paginator->isLast()}
+	<span class="buttonp">»</span>  
+	{else}
+	<a href="{link page, $paginator->page + 1}" {if $useAjax}onclick="AjaxMask.Show('{!$mask}');return !nette.action(this.href, this)"{/if}>»</a>  
+	{/if}   
+</div>
+{/if}

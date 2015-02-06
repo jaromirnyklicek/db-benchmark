@@ -1,0 +1,58 @@
+.lookup
+{
+position: absolute;
+border: 1px solid black;
+z-index: 10009;
+/*Remove below line to remove shadow. Below line should always appear last within this CSS*/
+filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135);
+}
+
+
+.lookupcontrol 
+{
+    cursor:pointer;
+}
+
+.lookup_up 
+{
+    height: 22px;
+    background-color: #aaa;
+    border-bottom: 1px solid #000000;
+}
+
+.lookup_up  input 
+{
+ font-size: 12px;
+ height: 15px;
+    vertical-align:middle;
+}
+
+.lookup_content
+{
+    background-color: #f5f5f5;
+    font-size: 11px;
+    overflow: auto;
+}
+
+.dropdown, .lookupedit {
+    background-color:#ACC1E4;
+    border:1px solid #bbb;   
+    margin:0;
+    padding:1px;
+    vertical-align:top;
+    position:relative;
+    top: 0px;
+}
+.dropdown { cursor:pointer;  }
+
+
+.lookuplist td 
+{
+       background-color: #eef; padding: 2px 4px;
+       border-bottom: 1px solid #bbb;
+}
+
+.lookuplist .odd, .lookuplist .odd td
+{
+       background-color: #fff;
+}

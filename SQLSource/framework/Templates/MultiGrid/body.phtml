@@ -1,0 +1,117 @@
+{snippet grid} 
+{? $mask = $control->getUniqueId().'_grid';}
+
+{* schova prekryvanou masku pres komponentu *}
+{if $useAjax}
+    <script type="text/javascript">
+        AjaxMask.Hide({$mask});
+    </script>
+{/if}
+<script type="text/javascript">
+{!$name}_selectAll = function (value) {
+    jQuery.each($('.{!$name}_select_chb'), function() {
+        this.checked = value;
+    });
+}
+{!$name}_selectedId = function() {
+    s = new Array();
+    arr = $('.{!$name}_select_chb');
+    for(j=0, i=0; i < arr.length; i++) if(arr[i].checked) s[j++] = arr[i].value;
+    return s;
+}          
+</script>
+
+<div id="{$mask}" class="datagrid" style="margin:2px">
+  <table cellpadding="0" cellspacing="0" class="grid">
+     <thead> 
+        {?$control->exec()}        
+        <tr class="actionrow">       
+            <td colspan="{=count($columns)}">
+                  {if $control->rightHtml}
+                  <div style="float:right; margin-right: 4px">
+                    {!$control->rightHtml}
+                  </div>                    
+                  {/if}
+                  {$control->renderViewSelect()}
+                  {?$control->renderPaginator()}
+            </td>
+        </tr>
+   	    <tr>
+   	    {foreach $columns as $item}
+   	 	    <th width="{$item->width}" {if $control->nowrap}style="white-space:nowrap"{/if}>
+   	 	    {if $item->member}
+                {if $item->sortable}
+	   	 	    <a {if $useAjax}onclick="AjaxMask.Show('{!$mask}');return !nette.action(this.href)"{/if} href="{link order $item->name}" {if isset($order[$item->name])} class="{$order[$item->name] === 'a' ? 'asc' : 'desc'}"{/if}>
+	   	 	        {!$item->title}
+	   	 	    </a>
+                {else}
+                    {!$item->title}
+                {/if}
+   	 	    {else}
+			    {!$item->title}
+   	 	    {/if}
+   	 	    </th>
+   	    {/foreach}   	
+   	    </tr>
+   	</thead>
+  
+    {foreach $rows as $row}      
+        <?php 
+            $meta = $control->getRowMeta($row);
+            $class = !$iterator->isOdd() ? 'first' : 'second';
+            if(isset($meta['class'])) $meta['class'] = $meta['class'].' '.$class;
+            else $meta['class'] = $class;
+            $tr = '<tr onmouseover="$(this).addClass(\'over\')" onmouseout="$(this).removeClass(\'over\')" ';
+            foreach($meta as $key => $item) $tr .= $key.'="'.$item.'" ';
+            $tr .= '>';
+            echo $tr;
+        ?>
+		{foreach $columns as $column}
+			{$column->setRow($row)}
+             <?php 
+                $td = '<td';
+                if($column->style != NULL) $td .= ' style="'.$column->style.'"';
+                if($column->cssClass != NULL) $td .= ' class="'.$column->cssClass.'"';
+                $td .= '>';
+                $td .= $column->render();
+                $td .= '</td>';
+                echo $td;
+             ?>			
+		{/foreach}
+		</tr>
+	{/foreach}
+    
+    
+    {* zjisteni jestli ma nejaky sloupec informace k sumacnimu radku *}
+    {foreach $columns as $item}
+        {? if($item->getOption('sum') != NULL) $sum = TRUE }
+    {/foreach}       
+    {if isset($sum)} {* zobrazeni sumacniho radku*}
+       <tr class="sumrow">
+       {foreach $columns as $row}       
+        <td width="{$row->width}" {if $control->nowrap}style="white-space:nowrap"{/if}>            
+            <b>{!$row->getOption('sum')}</b>
+        </td>
+       {/foreach}
+       </tr>
+    {/if}    
+    
+   {if count($controls)} 
+   <tr class="actionrow">       
+    <td colspan="{=count($columns)}">          
+          {foreach $controls as $c}
+            {!$c}
+          {/foreach}
+    </td>       
+   </tr>   
+   {/if}
+   <tr class="actionrow">       
+        <td colspan="{=count($columns)}">
+              {if $control->limitSelect}{?$control->renderLimit()}{/if}
+              {?$control->renderPaginator()}
+        </td>
+   </tr>    
+</table>
+</div>
+<div class="cleaner"></div>
+{/snippet}

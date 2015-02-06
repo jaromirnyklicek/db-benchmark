@@ -1,0 +1,6 @@
+{foreach $tabs as $key => $tabbed}
+    <div id="{$control->getName()}-{$tabbed->getName()}">
+        {$tabbed->renderContent()}
+    </div>
+{/foreach}
+<div class="cleaner"></div>
