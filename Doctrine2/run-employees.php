@@ -45,7 +45,7 @@ $em = EntityManager::create(
 	[
 		'driver'   => 'pdo_mysql',
 		'user'     => 'root',
-		'password' => 'asdex',
+		'password' => '',
 		'dbname'   => 'employees',
 	],
 	$config

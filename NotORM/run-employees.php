@@ -13,7 +13,7 @@ $limit = 500;
 $connection = new PDO(
 	'mysql:dbname=employees',
 	'root',
-	'asdex'
+	''
 );
 
 $notorm = new NotORM(

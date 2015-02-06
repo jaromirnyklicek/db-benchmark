@@ -29,7 +29,7 @@ $db = new Database([
 	(
 		'type' => 'mysqli',
 		'user' => 'root',
-		'pass' => 'asdex',
+		'pass' => '',
 		'host' => 'localhost',
 		'port' => FALSE,
 		'socket' => FALSE,

@@ -53,7 +53,7 @@ $limit = 500;
 
 $connection = new DibiConnection(array(
 	'username' => 'root',
-	'password' => 'asdex',
+	'password' => '',
 	'database' => 'employees',
 ));
 

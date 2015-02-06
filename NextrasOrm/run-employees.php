@@ -26,7 +26,7 @@ $limit = 500;
 
 $cacheStorage = new Nette\Caching\Storages\FileStorage(__DIR__ . '/temp');
 
-$connection  = new Nette\Database\Connection('mysql:dbname=employees', 'root', 'asdex');
+$connection  = new Nette\Database\Connection('mysql:dbname=employees', 'root', '');
 $structure   = new Nette\Database\Structure($connection, $useCache ? $cacheStorage : NULL);
 $conventions = new Nette\Database\Conventions\DiscoveredConventions($structure);
 $context     = new Nette\Database\Context($connection, $structure, $conventions, $useCache ? $cacheStorage : NULL);
